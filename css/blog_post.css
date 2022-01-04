@@ -10,25 +10,68 @@
   "ft"
 }
 
+img{
+width: 450px;
+height: auto;
+}
+
 /* Any other monitor */
-@media (min-width:900px) {
+@media (min-width:650px) {
   .container{
     display:grid;
+    border: 20px solid white;
     grid-template-areas:
     "hd hd hd hd"
-    "banner banner main main"
+    "banner main main main"
     "ft ft ft ft"
   }
 
-.header{
-
+.box {
+  border: 5px solid white;
 }
-.banner{
 
+.header{
+    grid-area:hd;
+    width: max-width;
+    height: auto;
+    background-color: #005A8D;
+    font-family: Didot, fantasy;
+    font-weight: lighter;
+      color: white;
+    padding-left: 20px;
+  }
+.banner{
+  grid-area:banner;
+  display: flex;
+  flex-flow:wrap;
 }
 .content{
-
+  grid-area:main;
+  display: flex;
+  flex-flow: row;
+}
+.title{
+  font-size: 32px;
+  font-family: Arial, cursive;
+  font-weight: bolder;
+  width: auto;
+}
+.quote{
+  font-size: 24px;
+  font-family: Arial, cursive;
+  font-weight: bolder;
+  font-style: italic;
+  color: #005A8D;
+  width: auto;
 }
 .footer{
-
+    grid-area:ft;
+    text-align: center;
+    width: auto;
+    padding-bottom: 10px;
+    height: 50px;
+    background-color: #CC6F29;
+    font-weight: lighter;
+      color: white;
+  }
 }

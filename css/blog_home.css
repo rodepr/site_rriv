@@ -54,7 +54,7 @@ a:hover {color: blue;}
 a:active {color: purple;}
 
 /* Any other monitor */
-@media (min-width:960px) {
+@media (min-width:650px) {
   .container{
     display:grid;
     grid-template-areas:
