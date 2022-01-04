@@ -1,0 +1,68 @@
+## Style_Guide
+
+- images
+- image caption
+- buttons
+- card
+
+## backgroundcolor:#005A8D, (darkblue)
+## textcolor:#F3E044, (golden yellow)
+## (unassigned) ForestShadow:#6F814F,
+## (unassigned) DarkMaroon:#4F0D01,
+## (unassigned) BurntOrange: #CC6F29
+
+/* Mobile Devices */
+## Links
+a {color: black;}
+a:hover {color: blue;}
+a:active {color: purple;}
+
+/* Desktop Monitors */
+// @media (min-width:600px) {
+.box{
+  border: 1px solid black;
+  font-family: Helvetica, Sans-Serif;
+    color: #005A8D;
+    padding-left: 20px
+}
+.header{
+  grid-area:hd;
+  width: auto;
+  height: 250px;
+}
+.navbar{
+  grid-area:nav;
+  width: auto;
+  height: 150px;
+}
+.body{
+  display: flex;
+  flex-direction: row;
+}
+
+.card{
+  width: 400px;
+  height: 600px;
+  padding: 40px;
+}
+
+.sidebar{
+  width: 600px;
+  height: 1000px;
+  grid-area:sd;
+}
+
+.content{
+  width: 1000px;
+  height: 400px;
+  grid-area:main;
+}
+
+.footer{
+  text-align: center;
+  width: auto;
+  height: 150px;
+  grid-area:ft;
+}
+
+// }
