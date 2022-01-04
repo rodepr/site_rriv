@@ -1,5 +1,6 @@
 ## CSS for Blog Post
 
+
 /* Mobile Display */
 .container{
   display:grid;
@@ -10,16 +11,14 @@
   "ft"
 }
 
-img{
-width: 450px;
-height: auto;
-}
+
 
 figcaption{
   display:block;
   font-style: italic;
   font-variant: small-caps;
      }
+
 /* Any other monitor */
 @media (min-width:650px) {
   .container{
@@ -51,7 +50,10 @@ figcaption{
   flex-flow:wrap;
   position:relative;
 }
-
+.banner img{
+width: 450px;
+height: auto;
+}
 .content{
   grid-area:main;
   display: flex;
@@ -63,6 +65,30 @@ figcaption{
   font-weight: bolder;
   width: auto;
 }
+
+.profile{
+  display:grid;
+  border: 2px solid white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.author{
+    display: grid;
+    border: 2px solid white;
+    grid-column: 1;
+    grid-row: 1;
+}
+.profile img{
+  display: flex
+  border: 2px solid white;
+  grid-column: col / span 2;
+  grid-row: 1;
+  width: auto;
+  height: 100px;
+  flex-wrap: nowrap;
+}
+
 .quote{
   font-size: 24px;
   font-family: Arial, cursive;

@@ -1,0 +1,55 @@
+## CSS for Blog subscribe & feedback
+
+
+/* Mobile Display */
+.container{
+  display:grid;
+  grid-template-areas:
+  "hd"
+  "main"
+  "ft"
+}
+
+/* Any other monitor */
+@media (min-width:650px) {
+  .container{
+    display:grid;
+    border: 20px solid white;
+    grid-template-areas:
+    "hd hd hd hd"
+    "main main main main"
+    "ft ft ft ft"
+  }
+
+.box {
+  border: 5px solid white;
+}
+
+.header{
+    grid-area:hd;
+    width: max-width;
+    height: auto;
+    background-color: #005A8D;
+    font-family: Didot, fantasy;
+    font-weight: lighter;
+      color: white;
+    padding-left: 20px;
+  }
+
+.content{
+  grid-area:main;
+  text-align: center;
+  font-style: italic;
+}
+
+.footer{
+    grid-area:ft;
+    text-align: center;
+    width: auto;
+    padding-bottom: 10px;
+    height: 50px;
+    background-color: #CC6F29;
+    font-weight: lighter;
+      color: white;
+  }
+}
