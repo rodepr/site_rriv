@@ -12,10 +12,6 @@
 ## (unassigned) BurntOrange: #CC6F29
 
 /* Mobile Devices */
-## Links
-a {color: black;}
-a:hover {color: blue;}
-a:active {color: purple;}
 
 /* Desktop Monitors */
 // @media (min-width:600px) {
@@ -63,6 +59,7 @@ a:active {color: purple;}
   width: auto;
   height: 150px;
   grid-area:ft;
+  position:fixed;
 }
 
 // }

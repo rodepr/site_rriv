@@ -1,3 +1,6 @@
+@import "buttons.css";
+@import "styles.css";
+
 ## CSS for Blog subscribe & feedback
 
 
@@ -47,7 +50,7 @@
     text-align: center;
     width: auto;
     padding-bottom: 10px;
-    height: 50px;
+    height: 60px;
     background-color: #CC6F29;
     font-weight: lighter;
       color: white;

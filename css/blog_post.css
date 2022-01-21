@@ -1,25 +1,46 @@
-## CSS for Blog Post
+@import "profile.css";
+@import "styles.css";
+@import "links.css";
+@import "buttons.css";
 
+/* BLOG POST GENERAL */
 
 /* Mobile Display */
 .container{
   display:grid;
   grid-template-areas:
-  "hd"
-  "banner"
-  "main"
-  "ft"
+    "hd"
+    "banner"
+    "main"
+    "ft"
+}
+.profile{
+    display:grid;
+    border: 2px solid white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    max-content: 10px
 }
 
-
-
 figcaption{
-  display:block;
-  font-style: italic;
-  font-variant: small-caps;
+    display:block;
+    font-style: italic;
+    font-variant: small-caps;
      }
+.banner{
+    grid-area:banner;
+    display: flex;
+    flex-flow:wrap;
+    position:relative;
+}
+.banner img{
+    width: 350px;
+    height: auto;
+}
 
-/* Any other monitor */
+/* ALL OTHER DISPLAYS
+Any other monitor */
 @media (min-width:650px) {
   .container{
     display:grid;
@@ -31,9 +52,8 @@ figcaption{
   }
 
 .box {
-  border: 5px solid white;
+    border: 5px solid white;
 }
-
 .header{
     grid-area:hd;
     width: max-width;
@@ -44,51 +64,59 @@ figcaption{
       color: white;
     padding-left: 20px;
   }
-.banner{
-  grid-area:banner;
-  display: flex;
-  flex-flow:wrap;
-  position:relative;
+nestedGrid{
+    grid-column: col 3 / span 2;
+    grid-row: row 2;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
 }
-.banner img{
-width: 450px;
-height: auto;
-}
-.content{
-  grid-area:main;
-  display: flex;
-  flex-flow: row;
-}
+  .banner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(0px, auto));
+    border: 2px solid white;
+  }
+  .banner img{
+    display: grid;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    width: 350px;
+    height: auto;
+  }
+  .content{
+        grid-area:main;
+        display: grid;
+        grid-column: 4 / 10;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-flow: row;
+  }
+
 .title{
   font-size: 32px;
   font-family: Arial, cursive;
   font-weight: bolder;
   width: auto;
 }
-
 .profile{
-  display:grid;
+  grid-area: banner;
+  display:flex;
   border: 2px solid white;
-  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-}
-.author{
-    display: grid;
-    border: 2px solid white;
-    grid-column: 1;
-    grid-row: 1;
+      padding-left: 2px;
+
 }
 .profile img{
-  display: flex
-  border: 2px solid white;
+  display: grid
+  border: 5px solid white;
   grid-column: col / span 2;
   grid-row: 1;
   width: auto;
   height: 100px;
   flex-wrap: nowrap;
 }
-
 .quote{
   font-size: 24px;
   font-family: Arial, cursive;
@@ -102,9 +130,9 @@ height: auto;
     text-align: center;
     width: auto;
     padding-bottom: 10px;
-    height: 50px;
+    height: 70px;
     background-color: #CC6F29;
     font-weight: lighter;
       color: white;
   }
-}
+
