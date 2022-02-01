@@ -2,6 +2,7 @@
 @import "styles.css";
 @import "links.css";
 @import "buttons.css";
+@import "paragraph.css";
 
 /* BLOG POST GENERAL */
 
@@ -17,10 +18,17 @@
 .profile{
     display:grid;
     border: 2px solid white;
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     max-content: 10px
+}
+
+.profile p{
+    display: inherit;
+}
+
+blockquote {
+  font-size: (12px);
 }
 
 figcaption{
@@ -37,6 +45,15 @@ figcaption{
 .banner img{
     width: 350px;
     height: auto;
+}
+.profile img{
+  display: grid
+  border: 5px solid white;
+  grid-column: col / span 2;
+  grid-row: 1;
+  width: auto;
+  height: 100px;
+  flex-wrap: nowrap;
 }
 
 /* ALL OTHER DISPLAYS
@@ -92,7 +109,9 @@ nestedGrid{
         display: flex;
         flex-flow: row;
   }
-
+blockquote {
+  font-size: (12px);
+}
 .title{
   font-size: 32px;
   font-family: Arial, cursive;
@@ -106,7 +125,9 @@ nestedGrid{
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
       padding-left: 2px;
-
+}
+.profile p{
+    display: inherit;
 }
 .profile img{
   display: grid
