@@ -43,7 +43,7 @@ figcaption{
     position:relative;
 }
 .banner img{
-    width: 350px;
+    max-width: 100%;
     height: auto;
 }
 .profile img{
@@ -55,6 +55,7 @@ figcaption{
   height: 100px;
   flex-wrap: nowrap;
 }
+
 
 /* Medium Tablet Display*/
 @media (min-width:650px) {
@@ -97,7 +98,7 @@ nestedGrid{
     display: grid;
     grid-column: 2 / 4;
     grid-row: 2 / 4;
-    width: 350px;
+    max-width: 350px;
     height: auto;
   }
   .content{
@@ -199,7 +200,7 @@ nestedGrid{
     display: grid;
     grid-column: 2 / 4;
     grid-row: 2 / 4;
-    width: 350px;
+    max-width: 350px;
     height: auto;
   }
   .content{
