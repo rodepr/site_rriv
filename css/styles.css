@@ -15,7 +15,8 @@
   "ft"
 }
 .nestedGrid{
-  display: grid;
+  display: flex;
+  flex-flow: wrap;
   grid-gap: 10px;
   max-width: 450px;
   margin: 0;
@@ -60,7 +61,7 @@
     height: 320px;
   }
 
-/* Any other monitor */
+
 @media (min-width:650px) {
   .container{
     display:grid;
@@ -191,3 +192,137 @@ nestedGrid{
     width: 30px;
     height: 30px;
   }
+ }
+
+/* Any other monitor */
+@media (min-width:1000px) {
+  .container{
+    display:grid;
+    grid-template-areas:
+    "hd hd hd hd hd"
+    "sd card1 card2 card3 card4"
+    "title title title title title"
+    "ft ft ft ft ft"
+  }
+  .nestedGrid{
+    display: flex;
+    grid-gap: 10px;
+    max-width: 1920px;
+    margin: 0;
+  }
+  .box{
+    display: block;
+    border: 10px solid white;
+      padding-left: 20px;
+      padding-bottom: 30px;
+
+  }
+  .header{
+    grid-area:hd;
+    width: auto;
+    height: auto;
+    background-color: #005A8D;
+    padding-left: 20px;
+  }
+  .sidebar{
+    grid-area:sd;
+    width: 200px;
+    height: 320px;
+  }
+  .card1{
+    grid-area:card1;
+    background-image: url('images/wwxd.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 320px;
+    display: flex
+  }
+  .card2{
+    grid-area:card2;
+    background-image: url('images/spike.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 320px;
+    display: flex
+    }
+  .card3{
+    grid-area:card3;
+    background-image: url('images/cardsAgainstUncertainty.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 320px;
+    display: flex
+  }
+  .card4{
+    grid-area:card4;
+    background-image: url('images/convergence.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 320px;
+    display: flex
+  }
+/*BLANK CARD*/
+  .card5{
+    grid-area:card5;
+    width: 250px;
+    height: 320px;
+  }
+  .footer{
+    grid-area:ft;
+    height: 50px;
+    width: auto;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #CC6F29;
+    font-weight: lighter;
+      color: white;
+    padding-left: 20px;
+  }
+.anchor{
+   display: flex;
+   width: auto;
+   height: 20px;
+   position: fixed;
+   bottom: 20px;
+   right: 50px;
+   padding-bottom:10px;
+   border:solid 10px;
+   border-color: white;
+       background-color: white;
+}
+nestedGrid{
+    display: flex;
+    grid-gap: 10px;
+    max-width: 1920px;
+    margin: 0 auto;
+    flex-flow: row;
+}
+.twitter{
+    grid-area:tw;
+    background-image: url('images/twitterLogo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+  }
+.facebook{
+    grid-area:fb;
+    background-image: url('images/facebookLogo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    }
+.linkedin{
+    grid-area:li;
+    background-image: url('images/linkedInLogo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+  }
+ }
